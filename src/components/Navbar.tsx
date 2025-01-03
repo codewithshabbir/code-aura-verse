@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
+//   const [theme, setTheme] = useState("light");
 
-const toggleTheme = () => {
-  console.log('hello');
+// const toggleTheme = () => {
+//   console.log('hello');
   
-}
+// }
 
 //   const toggleTheme = () => {
 //     const newTheme = theme === "light" ? "dark" : "light";
@@ -51,9 +51,9 @@ const toggleTheme = () => {
             }`}
           />
         </div> */}
-        <div onClick={toggleTheme} className={`relative bg-red-400 h-6 w-12 rounded-full ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'}`}>
+        {/* <div onClick={toggleTheme} className={`relative bg-red-400 h-6 w-12 rounded-full ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-300'}`}>
             <span className="absolute top-0.5 left-0 h-5 w-5 bg-black rounded-full translate-x-1"></span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

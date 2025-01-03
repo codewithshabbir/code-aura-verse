@@ -26,7 +26,7 @@ function urlFor(source: string) {
 }
 
 export default async function Home() {
-    let blogsQuery: BlogCardsTypes[] = await client.fetch(`
+    const blogsQuery: BlogCardsTypes[] = await client.fetch(`
           *[_type == 'blogPost']{
               title,
               author->{name, profileImage},
