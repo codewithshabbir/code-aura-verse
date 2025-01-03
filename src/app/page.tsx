@@ -1,7 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import BlogCards from "@/components/BlogCards";
 import imageUrlBuilder from "@sanity/image-url";
-import Image from "next/image";
 
 interface BlogCardsTypes {
   title: string;
