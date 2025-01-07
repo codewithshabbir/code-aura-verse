@@ -1,7 +1,7 @@
 import React from "react";
 import { client } from "@/sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
-import BlogCards from "../components/BlogCards";
+import { BlogCards } from "../components/BlogCards";
 
 interface BlogCardsTypes {
   title: string;
@@ -29,13 +29,13 @@ function urlFor(source: string) {
 
 const page = async () => {
   const blogsQuery: BlogCardsTypes[] = await client.fetch(`
-        *[_type == 'blogPost']{
-            title,
-            author->{name, profileImage},
-            categories->{title},
-            date,
-            mainImage,
-            'slug': slug.current,
+        *[_type == 'blogPost'] | order(date desc) [1...100] {
+          title,
+          author->{name, profileImage},
+          categories->{title},
+          date,
+          mainImage,
+          'slug': slug.current
         }
     `);
 
