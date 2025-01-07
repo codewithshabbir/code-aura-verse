@@ -30,7 +30,7 @@ function urlFor(source: string) {
 
 export default async function Home() {
   const latestBlog: BlogCardsTypes[] = await client.fetch(`
-          *[_type == 'blogPost']{
+          *[_type == 'blogPost']| order(date desc){
               title,
               author->{name, profileImage},
               categories->{title},
