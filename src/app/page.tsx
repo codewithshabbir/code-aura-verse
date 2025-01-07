@@ -42,7 +42,7 @@ export default async function Home() {
 
   return (
     <div>
-      <div className="mx-10 my-10 md:mx-[120px]">
+      <div className="mx-6 my-10 md:mx-[120px]">
         <div className="flex flex-wrap gap-6 mx-auto">
               <BlogSingleCard
                 key={latestBlog[0].title}
